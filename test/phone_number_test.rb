@@ -12,7 +12,6 @@ class PhoneNumberTest < MiniTest::Test
 
   def test_it_cleans_up_phone_numbers_with_periods_and_hyphens
     phone = PhoneNumber.new(:phone_number => "202.444-9382")
-    # assert "2024449382" == phone.phone_number
     assert_equal "2024449382", phone.phone_number
   end
 
