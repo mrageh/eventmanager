@@ -1,8 +1,8 @@
 class PhoneNumber
-  attr_accessor :phone_number
+  attr_accessor :value_phone
 
   def initialize(data)
-    @phone_number = clean_phone_number(data[:phone_number])
+    @value_phone = clean_phone_number(data[:value_phone])
   end
 
   def clean_phone_number(number)
@@ -14,8 +14,10 @@ class PhoneNumber
       if number.length != 10
         number = "0000000000"
       end
+    else
+      number = "0000000000"
     end
-    return number
+    number
   end
 
 end
